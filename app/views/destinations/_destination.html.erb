@@ -1,0 +1,22 @@
+<div id="<%= dom_id destination %>">
+  <p>
+    <strong>Name:</strong>
+    <%= destination.name %>
+  </p>
+
+  <p>
+    <strong>Agency:</strong>
+    <%= destination.agency_id %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= destination.price %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to destination.image.filename, destination.image if destination.image.attached? %>
+  </p>
+
+</div>

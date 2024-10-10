@@ -1,0 +1,37 @@
+<div id="<%= dom_id agency %>">
+  <p>
+    <strong>Name:</strong>
+    <%= agency.name %>
+  </p>
+
+  <p>
+    <strong>Host name:</strong>
+    <%= agency.host_name %>
+  </p>
+
+  <p>
+    <strong>Main Color:</strong>
+    <%= agency.main_color %>
+  </p>
+
+  <p>
+    <strong>Secondary Color:</strong>
+    <%= agency.secondary_color %>
+  </p>
+
+  <p>
+    <strong>MultiTenancy Level:</strong>
+    <%= agency.multi_tenancy_level %>
+  </p>
+
+  <p>
+    <strong>Parent Agency:</strong>
+    <%= agency.parent_agency_id %>
+  </p>
+
+  <p>
+    <strong>Logo:</strong>
+    <%= link_to agency.logo.filename, agency.logo if agency.logo.attached? %>
+  </p>
+
+</div>

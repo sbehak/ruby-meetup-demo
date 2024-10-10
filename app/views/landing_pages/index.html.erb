@@ -1,0 +1,17 @@
+<div style="background: <%= @agency.main_color%>">
+  <div style="position: relative; background-image: url(<%= url_for(@agency.logo) %>); height: 350px; background-repeat: no-repeat; background-position: center center; background-size: cover">
+    <strong style="text-shadow: 5px 5px 5px black; bottom: 0px; position: absolute;font-size: 30px; color:<%= @agency.secondary_color %>; bottom: 0px"><%= @agency.name %></strong>
+  </div>
+
+  <div id="destinations" style="padding: 50px; display: flex; flex-wrap: wrap">
+    <% @destinations.each do |destination| %>
+      <div style="width: 350px; border-radius: 5px; border-style: solid 1px black; overflow: hidden; background: white; margin: 50px">
+        <%= image_tag(destination.image) %>
+        <div style="padding: 10px">
+          <strong style="color: black"><%= destination.name %></strong>
+          <p style="color: black">$<%= destination.price %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
